@@ -1,11 +1,9 @@
-// let arr = [23,334,45,434,33,34];
+let arr = [23,334,45,434,33,34];
 
-// let ans = arr.every ((el) => el %10 ==0);
+let ans = arr.every ((el) => el %10 ==0);
 
-// console.log(ans)
+console.log(ans)
 
-
-// let nums = [10,20,30,40,5];
 
 // find the min in array using reduce 
 
@@ -22,3 +20,27 @@ else {
 });
 
 console.log (min);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+l

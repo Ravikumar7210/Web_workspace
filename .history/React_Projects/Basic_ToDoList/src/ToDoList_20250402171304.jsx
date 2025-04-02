@@ -33,7 +33,21 @@ export default function ToDoList() {
     )
   };
 
-  
+  let MarkAsAll = () =>{
+    setTodos((prevTodos)=> 
+     prevTodos.map((todo)=> {
+      if (todo.id == id) {
+        return {
+          ...todo, 
+          task: todo.task.toUpperCase(),
+        };
+      }
+     else {
+        return todo;
+     }
+     })
+    )
+  };
 
   let UpperCaseOne = (id) => {
     setTodos((prevTodos)=> 
@@ -67,16 +81,6 @@ export default function ToDoList() {
      )
   }
 
-  let MarkAsAll = () =>{
-    setTodos((prevTodos)=> 
-     prevTodos.map((todo)=> {
-      return {
-        ...todo, 
-        isDone:true,
-      };
-     })
-    )
-  };
 
 
   return (

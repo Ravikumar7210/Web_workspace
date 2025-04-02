@@ -33,7 +33,16 @@ export default function ToDoList() {
     )
   };
 
-  
+  let MarkAsAll = () =>{
+    setTodos((prevTodos)=> 
+     prevTodos.map((todo)=> {
+      return {
+        ...todo, 
+        task: todo.task.toUpperCase(),
+      };
+     })
+    )
+  };
 
   let UpperCaseOne = (id) => {
     setTodos((prevTodos)=> 
@@ -67,16 +76,6 @@ export default function ToDoList() {
      )
   }
 
-  let MarkAsAll = () =>{
-    setTodos((prevTodos)=> 
-     prevTodos.map((todo)=> {
-      return {
-        ...todo, 
-        isDone:true,
-      };
-     })
-    )
-  };
 
 
   return (
@@ -106,7 +105,6 @@ export default function ToDoList() {
       </ul>
       <br></br> <br></br>
       <button onClick={uppercaseAll}>Uppercase All</button>
-      &nbsp;&nbsp;&nbsp;
       <button onClick={MarkAsAll}>Mark As Done All</button>
       
     </div>
